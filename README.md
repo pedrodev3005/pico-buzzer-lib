@@ -15,7 +15,7 @@ Uma biblioteca em C para controlar buzzers passivos utilizando a **Raspberry Pi 
 
 1️⃣ **Clone o repositório** no seu ambiente de desenvolvimento:
    ```sh
-   git clone https://github.com/seu-usuario/pico-buzzer-lib.git
+   git clone https://github.com/pedrodev3005/pico-buzzer-lib.git
    cd pico-buzzer-lib
    ```
 
