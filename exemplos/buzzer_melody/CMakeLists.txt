@@ -28,35 +28,35 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(teste_manual_buzzer C CXX ASM)
+project(buzzer_melody C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(teste_manual_buzzer teste_manual_buzzer.c buzzer.c)
+add_executable(buzzer_melody buzzer_melody.c buzzer.c)
 
-pico_set_program_name(teste_manual_buzzer "teste_manual_buzzer")
-pico_set_program_version(teste_manual_buzzer "0.1")
+pico_set_program_name(buzzer_melody "buzzer_melody")
+pico_set_program_version(buzzer_melody "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(teste_manual_buzzer 0)
-pico_enable_stdio_usb(teste_manual_buzzer 1)
+pico_enable_stdio_uart(buzzer_melody 0)
+pico_enable_stdio_usb(buzzer_melody 1)
 
 # Add the standard library to the build
-target_link_libraries(teste_manual_buzzer
+target_link_libraries(buzzer_melody
         pico_stdlib hardware_pwm) 
 
 # Add the standard include files to the build
-target_include_directories(teste_manual_buzzer PRIVATE
+target_include_directories(buzzer_melody PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(teste_manual_buzzer 
+target_link_libraries(buzzer_melody 
         
         )
 
-pico_add_extra_outputs(teste_manual_buzzer)
+pico_add_extra_outputs(buzzer_melody)
 

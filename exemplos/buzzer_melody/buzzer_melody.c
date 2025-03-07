@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include "pico/stdlib.h"
-#include "buzzer.h" //mude para o caminho onde esta sua biblioteca.
+#include "buzzer.h" 
 
 #define BUZZER_PIN 21
 
