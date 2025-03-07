@@ -74,24 +74,17 @@ buzzer_set_frequency(&buzzer, 1500); // Muda para 1500 Hz
 buzzer_set_volume(&buzzer, 75);      // Define volume para 75%
 ```
 
-### 🔹 Executando uma melodia
-```c
-const uint melody_notes[] = {659, 659, 784, 659, 523};
-const uint melody_durations[] = {300, 300, 600, 300, 900};
-
-buzzer_melody(&buzzer, melody_notes, melody_durations, 5);
-```
-
 ---
 
 ## 🎵 Melodias de Exemplo  
 
 🎶 **Jingle Bells**  
 ```c
-const uint melody_notes[] = {659, 659, 659, 784, 659, 587, 523};
-const uint melody_durations[] = {300, 300, 300, 600, 300, 300, 900};
+const uint melody_notes[] = {659, 659, 659, 659, 659, 659, 659, 784, 523, 587, 659};
+const uint melody_durations[] = {300, 300, 600, 300, 300, 600, 300, 300, 300, 300, 900};
+const uint melody_length = sizeof(melody_notes) / sizeof(melody_notes[0]);
 
-buzzer_melody(&buzzer, melody_notes, melody_durations, 7);
+buzzer_melody(&buzzer1, melody_notes, melody_durations, melody_length);
 ```
 
 ---
