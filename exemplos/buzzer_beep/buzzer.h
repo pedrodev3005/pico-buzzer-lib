@@ -27,8 +27,9 @@ void buzzer_beep(Buzzer *buzzer, uint duration_ms, uint pause_ms);
 // Função para tocar um beep por um determinado tempo (essa função não utiliza interrupção)
 void buzzer_beep_no_interruption(Buzzer *buzzer, uint duration_ms, uint pause_ms);
 
-// Função para ligar/desligar o buzzer manualmente
+// Função para ligar o buzzer manualmente (atenção, o buzzer será ligado com o valor armazenado no level.)
 void buzzer_on(Buzzer *buzzer);
+// Desliga o buzzer (atenção, essa função atualiza o valor do level do buzzer para 0)
 void buzzer_off(Buzzer *buzzer);
 
 // Ajusta o volume do buzzer alterando o duty cycle

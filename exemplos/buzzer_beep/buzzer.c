@@ -98,9 +98,10 @@ void buzzer_on(Buzzer *buzzer) {
     pwm_set_gpio_level(buzzer->pin, buzzer->level);
 }
 
-// Desliga o buzzer
+// Desliga o buzzer (atenção, essa função atualiza o valor do level do buzzer para 0)
 void buzzer_off(Buzzer *buzzer) {
     pwm_set_gpio_level(buzzer->pin, 0);
+    buzzer->level = 0;
 }
 
 // ===========================
